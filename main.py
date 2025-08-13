@@ -4,26 +4,64 @@ import random
 # 기분별 여행지 데이터
 travel_data = {
     "행복해요 😊": [
-        {"name": "제주도", "desc": "푸른 바다와 한라산의 조화!", "img": "https://cdn.pixabay.com/photo/2016/11/29/02/29/korea-1868860_1280.jpg"},
-        {"name": "부산 해운대", "desc": "활기찬 해변과 맛있는 해산물", "img": "https://cdn.pixabay.com/photo/2017/04/20/21/21/beach-2246261_1280.jpg"}
-    ],
-    "우울해요 😔": [
-        {"name": "강원도 속초", "desc": "조용한 바닷가와 설악산의 평온함", "img": "https://cdn.pixabay.com/photo/2017/09/04/18/59/south-korea-2710856_1280.jpg"},
-        {"name": "경주", "desc": "역사와 고즈넉한 분위기 속 힐링", "img": "https://cdn.pixabay.com/photo/2018/04/25/22/46/korea-3351995_1280.jpg"}
-    ],
-    "모험이 필요해요 🚀": [
-        {"name": "네팔 포카라", "desc": "히말라야 트레킹의 시작점", "img": "https://cdn.pixabay.com/photo/2016/09/03/16/40/nepal-1649299_1280.jpg"},
-        {"name": "태국 치앙마이", "desc": "액티비티와 문화가 함께", "img": "https://cdn.pixabay.com/photo/2016/02/19/10/00/chiang-mai-1209359_1280.jpg"}
+        {
+            "name": "제주도 🏝️",
+            "desc": "대한민국 남쪽 끝에 위치한 섬으로, 푸른 바다와 웅장한 한라산이 공존하는 천혜의 관광지입니다. 사계절 내내 각기 다른 매력을 뽐내며, 청정 자연과 독특한 문화, 다채로운 먹거리를 즐길 수 있습니다. 가족, 연인, 혼자 여행 모두에 잘 어울리는 곳입니다.",
+            "img": "https://cdn.pixabay.com/photo/2016/11/29/02/29/korea-1868860_1280.jpg",
+            "spots": [
+                {"name": "🌅 성산일출봉", "desc": "10만 년 전 화산 활동으로 형성된 분화구로, 정상에서 바라보는 일출은 장관을 이룹니다. 새벽에 오르면 붉게 물든 하늘과 바다의 조화를 감상할 수 있습니다."},
+                {"name": "🏖️ 협재해수욕장", "desc": "에메랄드빛 바다와 고운 백사장이 펼쳐져 있어 사진 찍기에 좋고, 물이 얕아 가족 여행객에게 인기가 높습니다."},
+                {"name": "🚤 우도", "desc": "제주 본섬에서 배로 15분 거리에 위치한 작은 섬으로, 땅콩아이스크림과 우도봉 전망대가 유명합니다. 자전거로 한 바퀴 돌면 섬의 매력을 온전히 느낄 수 있습니다."}
+            ],
+            "foods": [
+                {"name": "🍖 흑돼지 BBQ", "desc": "제주산 흑돼지는 육즙이 풍부하고 고소한 맛이 일품입니다. 두툼하게 썬 고기를 숯불에 구워 먹으면 풍미가 배가됩니다."},
+                {"name": "🐟 갈치조림", "desc": "제주 바다에서 잡은 싱싱한 갈치를 매콤하고 달콤하게 조려낸 요리로, 밥과 함께 먹으면 최고의 반찬이 됩니다."},
+                {"name": "🐚 전복죽", "desc": "전복과 쌀, 참기름으로 정성껏 끓여낸 죽으로, 고소하고 부드러워 남녀노소 모두 즐길 수 있습니다."}
+            ]
+        },
+        {
+            "name": "부산 해운대 🌊",
+            "desc": "대한민국 제2의 도시 부산의 대표 해변 지역으로, 활기찬 분위기와 다양한 해양 레포츠, 그리고 맛있는 해산물이 함께하는 관광 명소입니다. 사계절 내내 관광객이 많으며, 주변에 고급 호텔과 카페, 쇼핑 시설이 잘 갖추어져 있습니다.",
+            "img": "https://cdn.pixabay.com/photo/2017/04/20/21/21/beach-2246261_1280.jpg",
+            "spots": [
+                {"name": "🏖️ 해운대 해수욕장", "desc": "한국에서 가장 유명한 해수욕장으로, 여름에는 수많은 피서객이 모입니다. 모래사장이 길고 바다가 잔잔해 산책과 휴식에도 적합합니다."},
+                {"name": "🌉 광안리", "desc": "광안대교 야경이 아름다워 밤에도 많은 사람들이 찾습니다. 해변에서 커피를 마시며 바라보는 야경은 부산 여행의 백미입니다."},
+                {"name": "🌳 태종대", "desc": "절벽과 등대, 울창한 숲이 어우러진 자연 관광지입니다. 유람선을 타고 해안 절벽을 감상할 수 있습니다."}
+            ],
+            "foods": [
+                {"name": "🍜 밀면", "desc": "밀가루 면과 시원한 육수로 만든 부산 대표 음식입니다. 고기 육수의 깊은 맛과 고소한 참기름이 조화를 이룹니다."},
+                {"name": "🍲 돼지국밥", "desc": "진하게 우려낸 돼지 뼈 육수에 밥을 말아 먹는 서민 음식입니다. 마늘, 새우젓, 부추를 곁들이면 맛이 배가됩니다."},
+                {"name": "🐟 회", "desc": "바닷가에서 바로 잡은 싱싱한 생선을 얇게 썰어 먹는 요리로, 부산에서는 다양한 횟감을 저렴하게 즐길 수 있습니다."}
+            ]
+        }
     ]
 }
 
+# 앱 제목
 st.title("🌍 기분별 여행지 추천기")
+st.write("기분에 맞는 여행지를 추천하고, 관광지와 음식 정보를 안내해드립니다 ✈️")
 
+# 기분 선택
 mood = st.selectbox("지금 기분을 선택하세요", list(travel_data.keys()))
 
-if st.button("추천 받기"):
+# 추천 버튼
+if st.button("🎯 추천 받기"):
     choice = random.choice(travel_data[mood])
-    st.subheader(f"✈️ {choice['name']}")
+    
+    # 여행지 정보
+    st.subheader(f"{choice['name']}")
     st.image(choice['img'], use_column_width=True)
-    st.write(choice['desc'])
-    st.markdown(f"[Google 지도에서 보기](https://www.google.com/maps/search/{choice['name']})")
+    st.write(f"📝 {choice['desc']}")
+    
+    # 관광지
+    st.markdown("**📍 주요 관광지:**")
+    for spot in choice['spots']:
+        st.markdown(f"- {spot['name']} — {spot['desc']}")
+    
+    # 음식
+    st.markdown("**🍽️ 추천 음식:**")
+    for food in choice['foods']:
+        st.markdown(f"- {food['name']} — {food['desc']}")
+    
+    # 지도 링크
+    st.markdown(f"[🗺️ Google 지도에서 {choice['name']} 보기](https://www.google.com/maps/search/{choice['name']})")
