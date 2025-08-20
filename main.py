@@ -78,17 +78,6 @@ st.markdown("""
             border: 1px solid #BBDEFB;
         }
         
-        /* 추천 결과 카드 스타일 */
-        .recommendation-card {
-            background-color: #E8F5E9; /* 연한 초록색 배경 */
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid #81C784; /* 왼쪽 테두리 강조 */
-            animation: fadeInUp 0.8s ease-out; /* 카드 등장 애니메이션 */
-        }
-
         /* 애니메이션 키프레임 */
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-20px); }
