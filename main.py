@@ -291,6 +291,3 @@ if st.button("✨ 여행지 추천받기!", key="recommend_button"):
         st.markdown("</div>", unsafe_allow_html=True)
 
         st.success("💖 어때요? 마음에 드셨나요? 즐거운 여행이 되기를 바랄게요!")
-
-# 🎈 이모지와 함께 마무리
-st.markdown("행복한 여행 준비 되세요! 🗺️")
